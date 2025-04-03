@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: identity-hub
+  datasource:
+    url: jdbc:postgresql://ep-snowy-king-a5qrgins.us-east-2.aws.neon.tech/crudbox?sslmode=require
+    username: crudbox_owner
+    password: npg_t6DqZw5xMkNn
+    driver-class-name: org.postgresql.Driver
+
+jpa:
+  database-platform: org.hibernate.dialect.PostgreSQLDialect
+  hibernate:
+      ddl-auto: update
+  show-sql: true
+  properties:
+      hibernate:
+  format_sql: true
+  open-in-view: false
+
+jwt:
+  secret: "crudbox-secret-key"
+  expiration: 86400 # 24h
